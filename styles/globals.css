@@ -17,6 +17,22 @@ a {
   box-sizing: border-box;
 }
 
+.canter {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
