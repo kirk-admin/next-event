@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 import EventList from "../../components/events/event-list";
@@ -12,6 +13,11 @@ const EventsMainPage = () => {
   };
   return (
     <>
+      <Head>
+        <title>All Events</title>
+        <meta name="description" content="All available events" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <EventSearch onSearch={findEventHandler} />
       <EventList items={events} />
     </>

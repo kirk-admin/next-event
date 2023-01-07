@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import EventContent from "../../components/event-detail/event-content";
 import EventLogistics from "../../components/event-detail/event-logistics";
@@ -13,6 +14,11 @@ const EventSinglePage = () => {
   }
   return (
     <>
+      <Head>
+        <title>{event.title}</title>
+        <meta name="description" content={event.description} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <EventSummary title={event.title} />
       <EventLogistics
         date={event.date}

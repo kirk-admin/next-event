@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import EventList from "../../components/events/event-list";
 import ResultsTitle from "../../components/events/results-title";
@@ -11,6 +12,11 @@ const FilteredEvenPage = () => {
   if (!filterData) {
     return (
       <>
+        <Head>
+          <title>Event Filtered</title>
+          <meta name="description" content="list of available events" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <div className="title">
           <p>Loading...</p>
         </div>
@@ -33,6 +39,11 @@ const FilteredEvenPage = () => {
   ) {
     return (
       <>
+        <Head>
+          <title>Event Filtered</title>
+          <meta name="description" content="list of available events" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <div className="title">
           <p>Invalid filtered please adjust your values</p>
           <Button link="/events">Show All Events</Button>
@@ -49,6 +60,11 @@ const FilteredEvenPage = () => {
   if (!filteredEvents || filteredEvents.length === 0) {
     return (
       <>
+        <Head>
+          <title>Event Filtered</title>
+          <meta name="description" content="list of available events" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <div className="title">
           <p>No events found.</p>
           <Button link="/events">Show All Events</Button>
@@ -61,6 +77,11 @@ const FilteredEvenPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Event Filtered</title>
+        <meta name="description" content="list of available events" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <ResultsTitle date={date} />
       <EventList items={filteredEvents} />
     </>
