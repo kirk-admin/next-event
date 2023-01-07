@@ -15,7 +15,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Home Page</h1>
         <EventList items={featuredEvents} />
       </main>
     </div>
